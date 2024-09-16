@@ -3,35 +3,35 @@ using UnityEngine.SceneManagement;
 
 public class SimplePauseMenu : MonoBehaviour
 {
-    public GameObject pauseMenu;
+    public GameObject PauseMenu;
 
     // Start is called before the first frame update
-    
+
     // Called when "Options" button is clicked
     public void OpenOptions()
     {
-      
-        pauseMenu.SetActive(false);    // Hide pause menu
+
+        PauseMenu.SetActive(false);    // Hide pause menu
     }
 
     // Called when "Back" button in options menu is clicked
     public void CloseOptions()
     {
-        
-        pauseMenu.SetActive(true);     // Show pause menu again
+
+        PauseMenu.SetActive(true);     // Show pause menu again
     }
 
     // Pauses the game
     public void PauseGame()
     {
-        pauseMenu.SetActive(true);
+        PauseMenu.SetActive(true);
         Time.timeScale = 0f;  // Stop time
     }
 
     // Resumes the game
     public void ResumeGame()
     {
-        pauseMenu.SetActive(false);
+        PauseMenu.SetActive(false);
         Time.timeScale = 1f;  // Resume time
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -39,7 +39,7 @@ public class SimplePauseMenu : MonoBehaviour
         if (scene.name == "GameScene")
         {
             // Find objects in the new scene, e.g., player, UI, etc.
-            GameObject pausemenu = GameObject.Find("pauseMenu");
+            GameObject Pausemenu = GameObject.Find("PauseMenu");
             Debug.Log("Game Scene loaded and player found: " + pausemenu.name);
         }
     }

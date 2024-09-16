@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class PauseMenu : MonoBehaviour
+public class Pausemenu : MonoBehaviour
 
 {
-    public GameObject pauseMenu;
+    public GameObject PauseMenu;
     public bool IsPuased;
     public void Start()
     {
-        pauseMenu.SetActive(false);
+        PauseMenu.SetActive(false);
     }
     public void Update()
     {
@@ -28,12 +28,13 @@ public class PauseMenu : MonoBehaviour
     }
     public void PuaseGame()
     {
-        pauseMenu.SetActive(true);
+        PauseMenu.SetActive(true);
         Time.timeScale = 0f;
         IsPuased = true;
     }
     public void ResumeGame()
-    { pauseMenu.SetActive(false);
+    { 
+        PauseMenu.SetActive(false);
         Time.timeScale = 1f;
         IsPuased = false;
     }

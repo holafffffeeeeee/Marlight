@@ -232,7 +232,15 @@ PrefabInstance:
       value: GameManager (1)
       objectReference: {fileID: 0}
     - target: {fileID: 3695048549372673738, guid: c0a036883d502e34bbaa2a130dfb5571, type: 3}
+      propertyPath: PauseMenu
+      value: 
+      objectReference: {fileID: 3703926780824653210, guid: 3d7eae464aa3344439aab71bfec0f932, type: 3}
+    - target: {fileID: 3695048549372673738, guid: c0a036883d502e34bbaa2a130dfb5571, type: 3}
       propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 3703926780824653210, guid: 3d7eae464aa3344439aab71bfec0f932, type: 3}
+    - target: {fileID: 6044593159726755151, guid: c0a036883d502e34bbaa2a130dfb5571, type: 3}
+      propertyPath: PauseMenu
       value: 
       objectReference: {fileID: 3703926780824653210, guid: 3d7eae464aa3344439aab71bfec0f932, type: 3}
     m_RemovedComponents: []
