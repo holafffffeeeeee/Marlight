@@ -40,7 +40,6 @@ public class SimplePauseMenu : MonoBehaviour
         {
             // Find objects in the new scene, e.g., player, UI, etc.
             GameObject Pausemenu = GameObject.Find("PauseMenu");
-            Debug.Log("Game Scene loaded and player found: " + pausemenu.name);
         }
     }
 }

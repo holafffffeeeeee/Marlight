@@ -6,8 +6,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance; // Singleton instance
 
     // Example game-wide variables
-    public int playerScore;
-    public bool isPaused;
+
+
     public float masterVolume = 1.0f;
 
     void Awake()

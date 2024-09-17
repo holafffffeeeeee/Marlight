@@ -243,7 +243,20 @@ PrefabInstance:
       propertyPath: PauseMenu
       value: 
       objectReference: {fileID: 3703926780824653210, guid: 3d7eae464aa3344439aab71bfec0f932, type: 3}
-    m_RemovedComponents: []
+    - target: {fileID: 7296175947782070288, guid: c0a036883d502e34bbaa2a130dfb5571, type: 3}
+      propertyPath: pauseMenuUI
+      value: 
+      objectReference: {fileID: 3703926780824653210, guid: 3d7eae464aa3344439aab71bfec0f932, type: 3}
+    - target: {fileID: 7296175947782070288, guid: c0a036883d502e34bbaa2a130dfb5571, type: 3}
+      propertyPath: PauseMenuPrefab
+      value: 
+      objectReference: {fileID: 3703926780824653210, guid: 3d7eae464aa3344439aab71bfec0f932, type: 3}
+    - target: {fileID: 7296175947782070288, guid: c0a036883d502e34bbaa2a130dfb5571, type: 3}
+      propertyPath: pauseMenuPrefab
+      value: 
+      objectReference: {fileID: 3703926780824653210, guid: 3d7eae464aa3344439aab71bfec0f932, type: 3}
+    m_RemovedComponents:
+    - {fileID: 7296175947782070288, guid: c0a036883d502e34bbaa2a130dfb5571, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

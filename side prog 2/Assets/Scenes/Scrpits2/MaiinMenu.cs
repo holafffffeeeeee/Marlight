@@ -1,10 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement; // Needed to load scenes
-using UnityEngine.UI; // Needed for UI elements
+
 
 public class MainMenuController : MonoBehaviour
 {
-    public bool IsPuased;
     public void StartGame()
     {
         // Load the main game scene
@@ -25,6 +24,6 @@ public class MainMenuController : MonoBehaviour
     public void Back()
     {
         SceneManager.LoadScene("GameScene");
-        IsPuased = false;
+       
     }
 }

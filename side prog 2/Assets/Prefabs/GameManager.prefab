@@ -9,10 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1743224454440853735}
-  - component: {fileID: 3695048549372673738}
   - component: {fileID: 2589182204654602459}
   - component: {fileID: 659027439759035980}
-  - component: {fileID: 6044593159726755151}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -35,20 +33,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3695048549372673738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3223019427529665380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 694be832c3d4ad946b5369fbed8b7214, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 3703926780824653210, guid: 3d7eae464aa3344439aab71bfec0f932, type: 3}
-  IsPuased: 0
 --- !u!114 &2589182204654602459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,8 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35446052c5d57b84abc7310ebea74700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerScore: 0
-  isPaused: 0
   masterVolume: 1
 --- !u!114 &659027439759035980
 MonoBehaviour:
@@ -76,16 +58,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef5d801bc3c465142a00fd865d7df505, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6044593159726755151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3223019427529665380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8478608a79482b644b7cf23318198e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 3703926780824653210, guid: 3d7eae464aa3344439aab71bfec0f932, type: 3}
