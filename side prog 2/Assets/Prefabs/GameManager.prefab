@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1743224454440853735}
   - component: {fileID: 2589182204654602459}
   - component: {fileID: 659027439759035980}
+  - component: {fileID: 4979618340892709144}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -45,7 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35446052c5d57b84abc7310ebea74700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  previousScene: 
   masterVolume: 1
+  shouldPauseOnReturn: 0
 --- !u!114 &659027439759035980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,3 +61,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef5d801bc3c465142a00fd865d7df505, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4979618340892709144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3223019427529665380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a84dc5cd46b6a2448d58a0872f9c3b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMixer: {fileID: 0}
+  mainSlider: {fileID: 0}
+  fullscreenToggle: {fileID: 0}
+  resolutionDropdown: {fileID: 0}

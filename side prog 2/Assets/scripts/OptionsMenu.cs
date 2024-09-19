@@ -42,4 +42,5 @@ public class SimplePauseMenu : MonoBehaviour
             GameObject Pausemenu = GameObject.Find("PauseMenu");
         }
     }
+    
 }

@@ -2366,8 +2366,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 659027439759035980, guid: c0a036883d502e34bbaa2a130dfb5571, type: 3}
-        m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
+      - m_Target: {fileID: 4979618340892709144, guid: c0a036883d502e34bbaa2a130dfb5571, type: 3}
+        m_TargetAssemblyTypeName: OptionsScript, Assembly-CSharp
         m_MethodName: Back
         m_Mode: 1
         m_Arguments:

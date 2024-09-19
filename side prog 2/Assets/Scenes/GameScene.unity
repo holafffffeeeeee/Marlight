@@ -450,7 +450,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &685537269
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14757,6 +14757,18 @@ PrefabInstance:
     - target: {fileID: 3703926780824653210, guid: 3d7eae464aa3344439aab71bfec0f932, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274155303696124563, guid: 3d7eae464aa3344439aab71bfec0f932, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1951293951}
+    - target: {fileID: 5274155303696124563, guid: 3d7eae464aa3344439aab71bfec0f932, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenOptions
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274155303696124563, guid: 3d7eae464aa3344439aab71bfec0f932, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnifiedPauseMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

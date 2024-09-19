@@ -13,7 +13,7 @@ public class MainMenuController : MonoBehaviour
     public void OpenOptions()
     {
         // Load the options menu scene
-        SceneManager.LoadScene("OptionsMenu"); // Replace with your actual options scene name
+        GameManager.Instance.LoadScene("OptionsMenu");// Replace with your actual options scene name
     }
 
     public void QuitGame()
@@ -24,6 +24,8 @@ public class MainMenuController : MonoBehaviour
     public void Back()
     {
         SceneManager.LoadScene("GameScene");
-       
+
     }
 }
+
+

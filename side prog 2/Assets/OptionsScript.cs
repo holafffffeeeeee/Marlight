@@ -65,4 +65,26 @@ public class OptionsScript : MonoBehaviour
     {
         Screen.fullScreen = isFullscreen;
     }
+
+    public void Back()
+    {
+        string previousScene = GameManager.Instance.previousScene;
+        if (previousScene == "MainMenu")
+        {
+            // Go back to Main Menu
+            GameManager.Instance.LoadScene("MainMenu");
+        }
+        else if (previousScene == "GameScene")
+        {
+            // Go back to Game Scene and set flag to pause on return
+            GameManager.Instance.shouldPauseOnReturn = true;
+            GameManager.Instance.LoadScene("GameScene");
+        }
+        else
+        {
+            Debug.LogWarning("Previous scene is not tracked or doesn't exist.");
+        }
+    }
+
+
 }

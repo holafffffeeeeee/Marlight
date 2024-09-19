@@ -57,4 +57,8 @@ public class UnifiedPauseMenu : MonoBehaviour
     {
         Application.Quit();
     }
+    public void OpenOptions()
+    {
+        GameManager.Instance.LoadScene("OptionsMenu");
+    }
 }
