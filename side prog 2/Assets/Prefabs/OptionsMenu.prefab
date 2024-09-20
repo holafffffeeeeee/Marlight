@@ -1049,6 +1049,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 897830077361996711}
+  - component: {fileID: 8759741213456425174}
+  - component: {fileID: 1148184808500031301}
   m_Layer: 0
   m_Name: OptionsMenu
   m_TagString: Untagged
@@ -1072,6 +1074,35 @@ Transform:
   - {fileID: 1075526292047322171}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8759741213456425174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2345686189937514158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8478608a79482b644b7cf23318198e0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PauseMenu: {fileID: 0}
+--- !u!114 &1148184808500031301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2345686189937514158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a84dc5cd46b6a2448d58a0872f9c3b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMixer: {fileID: 0}
+  mainSlider: {fileID: 0}
+  fullscreenToggle: {fileID: 0}
+  resolutionDropdown: {fileID: 0}
 --- !u!1 &2355146847465499012
 GameObject:
   m_ObjectHideFlags: 0
@@ -2366,7 +2397,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4979618340892709144, guid: c0a036883d502e34bbaa2a130dfb5571, type: 3}
+      - m_Target: {fileID: 964167419278812652}
         m_TargetAssemblyTypeName: OptionsScript, Assembly-CSharp
         m_MethodName: Back
         m_Mode: 1
