@@ -8,6 +8,12 @@ public class GameManager : MonoBehaviour
     public string previousScene;  // To track the previous scene
     public float masterVolume = 1.0f;
     public bool shouldPauseOnReturn = false;
+    public float savedHealth;
+    public float savedMana;
+    public float savedStamina;
+    public static GameManager instance;
+    public bool hasSavedStats = false;
+
     void Awake()
     {
         if (Instance == null)
@@ -55,4 +61,46 @@ public class GameManager : MonoBehaviour
             PauseMenuManager.PauseGame();
         }
     }
-}   
+    public void SavePlayerStats(PlayerStats playerStats)
+    {
+        savedHealth = playerStats.currentHealth;
+        savedMana = playerStats.currentMana;
+        savedStamina = playerStats.currentStamina;
+
+        hasSavedStats = true;
+    }
+
+    // Call this to restore stats (after coming back to GameScene)
+    public void RestorePlayerStats(PlayerStats playerStats)
+    {
+        if (hasSavedStats)
+        {
+            playerStats.currentHealth = savedHealth;
+            playerStats.currentMana = savedMana;
+            playerStats.currentStamina = savedStamina;
+        }
+    }
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "GameScene")
+        {
+            // Restore the player stats when returning to the game scene
+            PlayerStats playerStats = FindObjectOfType<PlayerStats>();
+            if (playerStats != null)
+            {
+                GameManager.Instance.RestorePlayerStats(playerStats);
+            }
+        }
+    }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+}

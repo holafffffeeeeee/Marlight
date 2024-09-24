@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UnifiedPauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;   // Reference to the pause menu UI in the scene
-    private bool isPaused = false;
 
+    private bool isPaused = false;
+    private PlayerStats playerStats;
     void Start()
     {
         if (pauseMenuUI != null)
@@ -15,6 +17,7 @@ public class UnifiedPauseMenu : MonoBehaviour
         {
             Debug.LogError("Pause Menu UI is not assigned!");
         }
+        playerStats = FindObjectOfType<PlayerStats>();
     }
 
     void Update()
@@ -57,8 +60,16 @@ public class UnifiedPauseMenu : MonoBehaviour
     {
         Application.Quit();
     }
-    public void OpenOptions()
+    public void OpenOptionsMenu()
     {
+        // Save player stats before changing the scene
+        PlayerStats playerStats = FindObjectOfType<PlayerStats>();
+        if (playerStats != null)
+        {
+            GameManager.Instance.SavePlayerStats(playerStats);
+        }
+
+        // Load the options menu
         GameManager.Instance.LoadScene("OptionsMenu");
     }
 }

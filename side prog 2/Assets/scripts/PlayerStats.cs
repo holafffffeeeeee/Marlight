@@ -12,16 +12,22 @@ public class PlayerStats : MonoBehaviour
     public float currentStamina;
 
     private HUDManager hudManager;  // Reference to the HUDManager
-
+   
     void Start()
     {
         // Initialize current values to max at the start
         currentHealth = maxHealth;
         currentMana = maxMana;
         currentStamina = maxStamina;
-
-        // Find the HUDManager in the scene
         hudManager = FindObjectOfType<HUDManager>();
+        if (!GameManager.instance.hasSavedStats)
+        {
+        }
+        else
+        {
+            GameManager.instance.RestorePlayerStats(this);
+        }
+
 
         if (hudManager == null)
         {
@@ -108,4 +114,6 @@ public class PlayerStats : MonoBehaviour
             hudManager.UpdateStaminaBar(currentStamina, maxStamina);
         }
     }
+
 }
+

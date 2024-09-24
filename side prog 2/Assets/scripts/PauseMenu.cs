@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Pausemenu : MonoBehaviour
-
+   
 {
+    private PlayerStats playerStats;
     public GameObject PauseMenu;
     public bool IsPuased;
     public void Start()
     {
+        playerStats = FindObjectOfType<PlayerStats>();
         PauseMenu.SetActive(false);
     }
     public void Update()
@@ -42,7 +45,17 @@ public class Pausemenu : MonoBehaviour
     {
         Application.Quit();
     }
-  
+    public void OpenOptionsMenu()
+    {
+        if (playerStats != null)
+        {
+            // Save the player's stats before switching to options
+            GameManager.instance.SavePlayerStats(playerStats);
+        }
+
+        // Load the options menu
+        SceneManager.LoadScene("OptionsMenu");
+    }
 
 }
 
