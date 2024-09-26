@@ -15,13 +15,14 @@ public class PlayerStats : MonoBehaviour
    
     void Start()
     {
-        // Initialize current values to max at the start
+        GameManager gammemanager = FindAnyObjectByType<GameManager>();
         currentHealth = maxHealth;
         currentMana = maxMana;
         currentStamina = maxStamina;
         hudManager = FindObjectOfType<HUDManager>();
-        if (!GameManager.instance.hasSavedStats)
+        if (!gammemanager.hasSavedStats)
         {
+            return;
         }
         else
         {

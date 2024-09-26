@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("start puase ");
         // Check if we should pause when entering GameScene again
         if (SceneManager.GetActiveScene().name == "GameScene" && shouldPauseOnReturn)
         {
@@ -58,6 +59,7 @@ public class GameManager : MonoBehaviour
 
     public void PauseGame()
     {
+        Debug.Log("start puase mananger");
         // Pausing logic, e.g., finding PauseMenu object and activating it
         UnifiedPauseMenu PauseMenuManager = FindObjectOfType<UnifiedPauseMenu>();
         if (PauseMenuManager != null)

@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class UnifiedPauseMenu : MonoBehaviour
 {
+    private PlayerStats playerStats;
     public GameObject pauseMenuUI;   // Reference to the pause menu UI in the scene
 
     private bool isPaused = false;
@@ -23,12 +24,14 @@ public class UnifiedPauseMenu : MonoBehaviour
         // Toggle pause when Escape is pressed
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            Debug.Log("get ");
             if (isPaused)
             {
                 ResumeGame();
             }
             else
             {
+                Debug.Log("else puase");
                 PauseGame();
             }
         }
@@ -36,15 +39,18 @@ public class UnifiedPauseMenu : MonoBehaviour
 
     public void PauseGame()
     {
+       
         if (pauseMenuUI != null)
+
         {
             PlayerStats playerStats = FindObjectOfType<PlayerStats>();
         if (playerStats != null)
         {
             GameManager.Instance.SavePlayerStats(playerStats);
         }
+            Debug.Log("puase game");
 
-        pauseMenuUI.SetActive(true);
+            pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
         }
