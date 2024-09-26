@@ -31,13 +31,17 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
-        // Track the current active scene before loading the new one
+        if (SceneManager.GetActiveScene().name == "GameScene")
+        {
+            // Save stats before leaving the game scene
+            PlayerStats playerStats = FindObjectOfType<PlayerStats>();
+            if (playerStats != null)
+            {
+                SavePlayerStats(playerStats);
+            }
+        }
+
         previousScene = SceneManager.GetActiveScene().name;
-
-        // Debug log to make sure the previousScene is set correctly
-        Debug.Log("Setting previousScene to: " + previousScene);
-
-        // Load the requested scene
         SceneManager.LoadScene(sceneName);
     }
 
@@ -75,9 +79,19 @@ public class GameManager : MonoBehaviour
     {
         if (hasSavedStats)
         {
+
             playerStats.currentHealth = savedHealth;
             playerStats.currentMana = savedMana;
             playerStats.currentStamina = savedStamina;
+
+            // Update the HUD immediately after restoring stats
+            HUDManager hudManager = FindObjectOfType<HUDManager>();
+            if (hudManager != null)
+            {
+                hudManager.UpdateHealthBar(playerStats.currentHealth, playerStats.maxHealth);
+                hudManager.UpdateManaBar(playerStats.currentMana, playerStats.maxMana);
+                hudManager.UpdateStaminaBar(playerStats.currentStamina, playerStats.maxStamina);
+            }
         }
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)

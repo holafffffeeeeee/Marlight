@@ -114,6 +114,7 @@ public class PlayerStats : MonoBehaviour
             hudManager.UpdateStaminaBar(currentStamina, maxStamina);
         }
     }
-
+    
 }
+
 

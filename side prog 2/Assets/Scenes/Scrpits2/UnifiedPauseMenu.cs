@@ -6,7 +6,6 @@ public class UnifiedPauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;   // Reference to the pause menu UI in the scene
 
     private bool isPaused = false;
-    private PlayerStats playerStats;
     void Start()
     {
         if (pauseMenuUI != null)
@@ -17,7 +16,6 @@ public class UnifiedPauseMenu : MonoBehaviour
         {
             Debug.LogError("Pause Menu UI is not assigned!");
         }
-        playerStats = FindObjectOfType<PlayerStats>();
     }
 
     void Update()
@@ -40,9 +38,15 @@ public class UnifiedPauseMenu : MonoBehaviour
     {
         if (pauseMenuUI != null)
         {
-            pauseMenuUI.SetActive(true);    // Show the pause menu
-            Time.timeScale = 0f;            // Freeze the game
-            isPaused = true;
+            PlayerStats playerStats = FindObjectOfType<PlayerStats>();
+        if (playerStats != null)
+        {
+            GameManager.Instance.SavePlayerStats(playerStats);
+        }
+
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;
         }
     }
 
@@ -72,4 +76,5 @@ public class UnifiedPauseMenu : MonoBehaviour
         // Load the options menu
         GameManager.Instance.LoadScene("OptionsMenu");
     }
+
 }

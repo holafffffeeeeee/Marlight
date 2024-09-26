@@ -45,17 +45,7 @@ public class Pausemenu : MonoBehaviour
     {
         Application.Quit();
     }
-    public void OpenOptionsMenu()
-    {
-        if (playerStats != null)
-        {
-            // Save the player's stats before switching to options
-            GameManager.instance.SavePlayerStats(playerStats);
-        }
-
-        // Load the options menu
-        SceneManager.LoadScene("OptionsMenu");
-    }
+   
 
 }
 
